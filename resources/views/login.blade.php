@@ -25,6 +25,24 @@
                 <input type="submit" value="Submit">
             </form>
         </div>
+
+        {{-- {{ hi }}
+
+        
+
+        @foreach ( as )
+            
+        @endforeach
+
+        @csrf
+
+        @auth
+        $name
+        @endauth
+
+        @guest
+        $guest
+        @endguest --}}
         
         
     </body>

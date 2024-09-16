@@ -55,7 +55,17 @@ class PatientController extends Controller
         return $pdf->stream();
         // return redirect()->route('patientlist');
     }
+        
+    
+    public function search(Request $request)
+    {
+        $query = $request->input('query');
+        $patients = Patient::where('p_reg', 'LIKE', '%'.$query.'%')
+                         ->orWhere('pname', 'LIKE', '%'.$query.'%')
+                         ->paginate(10);                 
+        return view('patients.patientlist',compact('patients'));
 
+    }
 
     public function generateCard(PDF $pdf)
     {

@@ -69,40 +69,42 @@
                     <button class="btn"><a class="btn"href ="{{route('dashboard') }}">DASHBOARD</a></button>
                     <button class="btn"><a class="btn"href ="{{route('patientlist') }}">Patient Registration</a></button> 
                     <button class="btn"><a class="btn"href ="{{route('doctorlist') }}"> Doctors Information </a> </button>
+                    <button class="btn"><a class="btn"href ="{{route('doctor_appointment') }}"> Doctor Appointment </a> </button>
+
                 </div>
             </div>
             <div class="container">
                 <div class="inner-container" >
-                    <h3>  50</h3>
-                    <h3> Total OPD Patient</h3>
+                    <h2> {{ $patientCount }}</h2>
+                    <h3> Registered Patient</h3>
                 </div>
                 <div class="inner-container" >
-                    <h3>  50</h3>
-                    <h3> Total OPD Patient</h3>
+                    <h2>  {{ $doctorCount }}</h2>
+                    <h3> Total Doctor</h3>
                 </div>
                 <div class="inner-container" >
-                    <h3>  50</h3>
-                    <h3> Total OPD Patient</h3>
+                    <h2>  50</h2>
+                    <h3> IPD Patient</h3>
                 </div>
                 <div class="inner-container" >
-                    <h3>  50</h3>
-                    <h3> Total OPD Patient</h3>
+                    <h2>  50,000 </h2>
+                    <h3> OPD Collection</h3>
                 </div> <br> <br>  <br>
                 <div class="inner-container" >
-                    <h3>  50</h3>
-                    <h3> Total OPD Patient</h3>
+                    <h2>  100,000</h2>
+                    <h3> Total IPD Collection </h3>
                 </div>
                 <div class="inner-container" >
-                    <h3>  50</h3>
-                    <h3> Total OPD Patient</h3>
+                    <h2>  40,000  </h2>
+                    <h3> Pharmacy Collection</h3>
                 </div>
                 <div class="inner-container" >
-                    <h3>  50</h3>
-                    <h3> Total OPD Patient</h3>
+                    <h2> 80 </h2>
+                    <h3> Total Employee </h3>
                 </div>
                 <div class="inner-container" >
-                    <h3>  50</h3>
-                    <h3> Total OPD Patient</h3>
+                    <h2>  50</h2>
+                    <h3> Total Bed</h3>
                 </div>
             </div>
 

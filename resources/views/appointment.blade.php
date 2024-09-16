@@ -35,6 +35,7 @@
         float: left;
         height: 600px;
         margin: auto;
+
     }
 
     .inner-container {
@@ -46,39 +47,27 @@
         margin-left: 5px;
         margin-bottom: 20px;
     }
-
-    a:link {
-        text-decoration: none;
-    }
-
-    .btn {
-        text-decoration-color: white;
-        border: none;
-        height: 40;
-        padding: 10;
-        text-align: center;
-        font-size: 16;
-        margin: 0 0 2 0;
-        width: 100%;
-        background-color: rgb(12, 141, 150);
-    }
-
-    .header3 {
-        background-color: rgb(20, 159, 152);
-        color: white;
-        padding: 5px;
-        text-align: center;
-        margin: auto;
-    }
-
-    .form {
-        text-align: left;
-        height: auto;
-        width: 20px;
-        background-color: lightgray;
-        margin: auto;
-        padding: 50px 20px;
-    }
+    a:link{
+            text-decoration:none;        
+        }
+        .btn{
+            text-decoration-color:white;
+            border: none;
+            height: 40;
+            padding: 10; 
+            text-align:center;
+            font-size: 16;
+            margin:0 0 2 0;
+            width:100%;
+            background-color: rgb(12, 141, 150);
+        }
+        .header3{
+            background-color: rgb(20, 159, 152); 
+            color:white; 
+            padding: 5px; 
+            text-align:center;
+            margin:auto;
+        }
 </style>
 
 <body>
@@ -89,23 +78,24 @@
     <div>
         <div class="sidebar">
             <div>
-                <button class="btn"><a href ="{{ route('dashboard') }}">DASHBOARD</a></button>
-                <button class="btn"><a href ="{{ route('patientlist') }}">Patient Registration</a> </button>
-                <button class="btn"><a href ="{{ route('doctorlist') }}"> Doctors Information </a> </button>
+                <button class="btn"><a href ="{{route('dashboard') }}">DASHBOARD</a></button>
+                <button class="btn"><a href ="{{route('patientlist') }}">Patient Registration</a> </button> 
+                <button class="btn"><a href ="{{route('doctorlist') }}"> Doctors Information </a> </button>
+                <button class="btn"><a href ="{{route('doctor_appointment') }}"> Doctor Appointment </a> </button>
+
 
             </div>
         </div>
         <div class="container">
             <div class="inner-container">
-                <h3 class="header3"> Patient Information </h3> <br>
-                <button> <a href ="{{ route('new_reg') }}"> New Registration </a> </button> <br> <br>
+                <h3 class="header3"> Doctor Appointment </h3> <br>
 
-                <form action="{{ route('patient.search') }}" method="get">
-                    <input type ="text" name="query" placeholder="search patient..." required />
-                    {{-- <input type="submit" class="btn btn-success" value="Search" /> --}}
-                    <button type ="submit"> Search </button>
-                </form>
-
+                <button> <a href ="{{ route('create_appointment') }}"> New Appointment </a> </button> <br> <br>
+            {{-- <form action="{{ route('patient.search') }}" method="get">    
+                <input type ="text" name="query" placeholder="search patient..." required />
+                <button type ="submit"> Search </button> 
+            </form> --}}
+            
                 @if (session('success'))
                     <p> {{ session('success') }}</p>
                 @endif
@@ -115,33 +105,34 @@
                             <th> Sl# </th>
                             <th>Registration Number</th>
                             <th>Patient Name</th>
-                            <th>NID</th>
                             <th>Mobile Number</th>
-                            <th>Date of Birth</th>
+                            <th>Doctor Name</th>
+                            <th>Department</th>
+                            <th>Room Number</th>
                             {{-- <th>Create Date</th>
                             <th>Update Date</th> --}}
                             <th>Action</th>
                         </tr>
                     </thead>
                     <tbody>
-                        @foreach ($patients as $item)
-                            <tr>
+                        {{-- @foreach ($patients as $item) --}}
+                            {{-- <tr> --}}
                                 {{-- <td>{{ $patients->$key + firstItem() }}</td> --}}
-                                <td>{{ $item->sl }}</td>
+                                {{-- <td>{{ $item->sl }}</td>
                                 <td>{{ $item->p_reg }}</td>
                                 <td>{{ $item->pname }}</td>
                                 <td>{{ $item->nid }}</td>
                                 <td>{{ $item->mobilenumber }}</td>
-                                <td>{{ $item->dob }}</td>
+                                <td>{{ $item->dob }}</td> --}}
                                 {{-- <td>{{ $item->created_at }}</td>
                                 <td>{{ $item->updated_at }}</td> --}}
-                            </tr>
-                        @endforeach
+                            {{-- </tr>
+                        @endforeach --}}
                     </tbody>
                 </table>
-                {{ $patients->links() }}
+                {{-- {{ $patients->links() }} --}}
                 {{-- {{ $patients->links()}} --}}
-
+                    
                 {{-- @elsePush()
                     
                 @pushEndIf }} --}}
